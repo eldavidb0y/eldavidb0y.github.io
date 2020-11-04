@@ -19,11 +19,13 @@
             height: 50px;
             font-size: 14px;
             background-color: green;
+            margin: 10px;
+            font-weight: bolder;
         }
             button:hover {
-            background-color: orange;
+            background-color: orange;                         
+        }
             
-            }
             @media (min-width: 600px){
                 body {
                 background-color: rgb(197, 228, 240);
@@ -43,16 +45,24 @@
                 font-size: 20px;
                 width: 200px;
                 padding: 20px;
-                margin: 20px;            
+                margin: 20px;  
             }
             #carouselExampleInterval {
-                width: 600px;
+                margin-bottom: 30px;
+                width: 800px;
                 text-align: center;
                 margin: 20px;
             }
             .card-deck {
                 margin: 10px;
                 padding: 10px;
+                  
+            }
+            .topButtons {
+                font-weight: bolder;
+                border: 5px;
+                /*does not work
+                */
             }
         </style>
 
@@ -63,11 +73,12 @@
      </div>
     
         </div>
-        <button type="button" class="btn btn-outline-primary">Main</button>
-        <button type="button" class="btn btn-outline-secondary">Notes</button>
-        <button type="button" class="btn btn-outline-success">Successes</button>
-        <button type="button" class="btn btn-outline-danger">Failes</button>
-
+        <div class="topButtons">
+            <button type="button" class="btn btn-outline-primary">Main</button>
+            <button type="button" class="btn btn-outline-secondary">Notes</button>
+            <button type="button" class="btn btn-outline-success">Successes</button>
+            <button type="button" class="btn btn-outline-danger">Failes</button>
+        </div>
         <div class="card-deck">
         <div class="card h-100" style="width: 18rem;">
             <img src="Pajaro.jpg" class="card-img-top" alt="...">
@@ -93,6 +104,15 @@
               <a href="20200101_parqueJuarezLos4.JPG" class="btn btn-primary">See image</a>
             </div>
           </div>
+          <div class="card h-100" style="width: 18rem;">
+            <img src="20180924_florenceEnrredadera.JPG" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Enredaderita nice!</h5>
+              <p class="card-text">24 Sep 2018, Jrz</p>
+              <a href="20180924_florenceEnrredadera.JPG" class="btn btn-primary">See image</a>
+            </div>
+          </div>
+
         </div>
 
         <button>
