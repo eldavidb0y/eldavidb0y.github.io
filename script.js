@@ -1,6 +1,6 @@
 
-alert("Bienvenues! (a VIRUS is now infecting your PC, please wait .... XD )");
-
+var person = prompt("Please enter you name", "Erica Galindo");
+alert(`Hello ${person}, a VIRUS is now infecting your PC, please wait .... XD )`);
 
 document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('#button3').onclick = () => {
@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (document.querySelector('#blueButton').onclick = () => {
+/*document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelectorall('#blueButton').disabled = false) {
          alert("Useless buttons for now C: ");
-    });
-})
+    } else {display="error"; }
+    return false;
+})*/
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -80,18 +81,27 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('counter', 0);
   }
   function count() {
-      let counter = localStorage.getItem('counter'); //equal to saying counter++;
+      let counter = localStorage.getItem('counter'); 
       counter++;
       document.querySelector('#zero').innerHTML = counter;
       localStorage.setItem('counter', counter);
   }
 
+//  document.getElementById("person").innerHTML = document.querySelector('#hello') 
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#hello').innerHTML = localStorage.getItem('person');
+    if (person != null) {
+              document.querySelector('#hello').innerHTML = "Hello " + person + "!";
+}})
 
-  function hello() {
-      let helloGoodbye = document.querySelector('#hello');
-     
-      if (helloGoodbye.innerHTML === 'Hello!') { 
-      helloGoodbye.innerHTML = 'Goodbye!';
-  } else {helloGoodbye.innerHTML = 'Hello!';
+function hello() {
+      let helloGoodbye = localStorage.getItem('#hello');
+      if (document.querySelector('#hello').innerHTML === "Hello " + person + "!")
+       {
+//      document.getElementById('person').innerHTML = "Hello" + person + "!";
+    document.querySelector('#hello').innerHTML = 'Goodbye!';
+  } else {
+    document.querySelector('#hello').innerHTML = "Hello " + person + "!";
   } 
-  }        
+}        
+
