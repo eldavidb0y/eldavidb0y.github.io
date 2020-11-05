@@ -52,14 +52,14 @@
                 margin: 20px;  
             }
             #carouselExampleInterval {
-                margin-bottom: 30px;
+                margin-bottom: 10px;
                 width: 800px;
                 text-align: center;
                 margin: 20px;
             }
             .card-deck {
-                margin: 10px;
-                padding: 10px;
+                margin: 5px;
+                padding: 5px;
                   
             }
             .topButtons {
@@ -68,35 +68,11 @@
                 /*does not work
                 */
             }
+            #zero {
+                object-position: right;
+            }
         </style>
-
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('#button1').onclick = hello;
-        })
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('#button2').onclick = count;
-        })
-
-
-        let counter = 0;
-        function count() {
-            counter = counter + 1; //equal to saying counter++;
-            document.querySelector('#zero').innerHTML = counter;
-        }
-
-
-        function hello() {
-            let helloGoodbye = document.querySelector('#hello');
-           
-            if (helloGoodbye.innerHTML === 'Hello!') { 
-            helloGoodbye.innerHTML = 'Goodbye!';
-        } else {helloGoodbye.innerHTML = 'Hello!';
-        } 
-        }
-        
-    </script>
+<script src="script.js" > </script>
 
 </head>
    <body>
@@ -110,16 +86,23 @@
         Switch from hello to goodbye (using JavaScript)
     </button>
     <button id="button2">
-        See a pointless counter start counting from 0 (using JavaScript)
+        See a pointless counter going up (using JavaScript)
     </button>
+
+    <form id="formCurrency">
+      <input id="currency" placeholder="Currency" type="text">
+      <input type="submit" value="Convert">
+    </form>
+    <div id="resultCurrency">
+    </div>
 
        <div class="card-deck">
         <div class="card h-100" style="width: 18rem;">
-            <img src="Pajaro.jpg" class="card-img-top" alt="...">
+            <img src="IMG_20200510_sorprendidos.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Honey Crap!</h5>
-              <p class="card-text">La vez que el ave se quedó dormido en casa de moscar y victor le echó miel+harina</p>
-              <a href="Pajaro.jpg" class="btn btn-primary">See image</a>
+              <h5 class="card-title">Sorprendidos!</h5>
+              <p class="card-text">Que sorpresón =0</p>
+              <a href="IMG_20200510_sorprendidos.jpg" class="btn btn-primary">See image</a>
             </div>
           </div>
         <div class="card h-100" style="width: 18rem;">
