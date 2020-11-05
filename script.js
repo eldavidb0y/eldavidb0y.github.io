@@ -1,4 +1,4 @@
-<script>
+
 
 document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#button1').onclick = hello;
@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
       //setInterval(count, 1000);
   })
+        //by default, submit button is disabled
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelector('#submit').disabled = true;
+        document.querySelector('#formCurrency').onkeyup = () => { 
+            if (document.querySelector('#currency').value.length > 0) {
+                document.querySelector('#submit').disabled = false;
+            }
+            else { 
+            document.querySelector('#submit').disabled = true;
+            }
+        }
+    })
+
 
   document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#formCurrency').onsubmit=function() {
@@ -20,7 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
               const currency=document.querySelector('#currency').value.toUpperCase();
               const rate = data.rates[currency];
               if (rate !== undefined) { 
-              document.querySelector('#resultCurrency').innerHTML = `1 EUR is equal to ${rate.toFixed(3)} ${currency}.`;
+              document.querySelector('#resultCurrency').innerHTML = `1 EUR son ${rate.toFixed(3)} ${currency}... está dlv`;
+              document.querySelector('#formCurrency').value = '';
+                
+
+                //stop form from submiting
+                return false;
+
           } else {
                   document.querySelector('#resultCurrency').innerHTML = 'Invalid currency.';
 
@@ -55,4 +74,3 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {helloGoodbye.innerHTML = 'Hello!';
   } 
   }        
-</script>

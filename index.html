@@ -1,78 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> My webpage 1 HDD</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <head>
+    <title> My webpage 1 HDD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         
-        <style>
-            a {
-            color: blue;
-            text-shadow: 1px;
-            font-size: 18px;
-           }  
-            a[href="https://google.com"]{
-            color: red;   
-        }
-            button{
-            width: 200px;
-            height: 60px;
-            font-size: 12px;
-            background-color: green;
-            margin: 10px;
-           }
-            button:hover {
-            background-color: orange;                         
-        }
-            
-            @media (min-width: 800px){
-                body {
-                background-color: rgb(197, 228, 240);
-                background-image: url('florence_buenCulo_sep2018.JPG');
-                background-size: cover;
-                background-attachment: fixed;
-                }
-            }
-            @media (max-width: 799px){
-                body {
-                    background-color: yellowgreen;
-                    margin 20px;
-                    background-image: url('florence_buenCulo_sep2018.JPG');
-                    background-size:contain;
-                }
-            }
-            #container {
-                display: flex;
-                flex-wrap: wrap; 
-            }
-            #container > div {
-                background-color: wheat;
-                font-size: 20px;
-                width: 200px;
-                padding: 20px;
-                margin: 20px;  
-            }
-            #carouselExampleInterval {
-                margin-bottom: 10px;
-                width: 800px;
-                text-align: center;
-                margin: 20px;
-            }
-            .card-deck {
-                margin: 5px;
-                padding: 5px;
-                  
-            }
-            .topButtons {
-                font-weight: bolder;
-                border: 5px;
-                /*does not work
-                */
-            }
-            #zero {
-                object-position: right;
-            }
-        </style>
-<script src="script.js" > </script>
+    <style>
+      a {
+        color: blue;
+        text-shadow: 1px;
+        font-size: 18px;
+      }  
+      a[href="https://google.com"]{
+        color: red;   
+      }
+      button{
+        width: 200px;
+        height: 60px;
+        font-size: 12px;
+        background-color: green;
+        margin: 10px;
+      }
+      button:hover {
+        background-color: orange;                         
+      }
+        
+      @media (min-width: 800px){
+          body {
+          background-color: rgb(197, 228, 240);
+          background-image: url('florence_buenCulo_sep2018.JPG');
+          background-size: cover;
+          background-attachment: fixed;
+          }
+      }
+      @media (max-width: 799px){
+          body {
+              background-color: yellowgreen;
+              margin 20px;
+              background-image: url('florence_buenCulo_sep2018.JPG');
+              background-size:contain;
+          }
+      }
+      #container {
+          display: flex;
+          flex-wrap: wrap; 
+      }
+      #container > div {
+          background-color: wheat;
+          font-size: 20px;
+          width: 200px;
+          padding: 20px;
+          margin: 20px;  
+      }
+      #carouselExampleInterval {
+          margin-bottom: 10px;
+          width: 800px;
+          text-align: center;
+          margin: 20px;
+      }
+      .card-deck {
+          margin: 5px;
+          padding: 5px;           
+      }
+      .topButtons {
+          font-weight: bolder;
+          border: 5px;
+      }
+      #zero {
+          object-position: right;
+      }
+      #top {       
+        font-style: italic;
+      }
+      #resultCurrency {
+        text-align: center;
+        background-color: aqua;
+        width:  auto;
+        height: auto;
+        margin: right;
+        font-weight: bold;
+        font-style: italic;
+
+      }
+      #formCurrency {
+        text-align: right;
+        font-size: 15px;
+      }
+      #hello {
+        font-size: 22px;
+        font-style: italic;
+        color: darkblue;
+      }
+      h2 {
+        font-size: 14px;
+      }
+    </style>
+    
+    <script src="script.js"></script>
 
 </head>
    <body>
@@ -80,8 +103,17 @@
         Bienvenues à ma premiere WebPage!
     </div>
 
-    <h2 id="zero">0</h2>
-    <h1 id="hello">Hello!</h1>
+    <Div class="top">
+      <h2 id="zero">0</h2>
+      <h1 id="hello">Hello!</h1>
+      <form id="formCurrency">
+        <input id="currency" placeholder="Currency (e.g. EUR,USD,..)" type="text">
+        <input type="submit" value="Show exchange rate">
+      </form>
+      <div id="resultCurrency">
+      </div>
+    </Div>
+
     <button id="button1">
         Switch from hello to goodbye (using JavaScript)
     </button>
@@ -89,12 +121,6 @@
         See a pointless counter going up (using JavaScript)
     </button>
 
-    <form id="formCurrency">
-      <input id="currency" placeholder="Currency" type="text">
-      <input type="submit" value="Convert">
-    </form>
-    <div id="resultCurrency">
-    </div>
 
        <div class="card-deck">
         <div class="card h-100" style="width: 18rem;">
