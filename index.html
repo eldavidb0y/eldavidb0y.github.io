@@ -9,19 +9,17 @@
             color: blue;
             text-shadow: 1px;
             font-size: 18px;
-            font-weight: bold; 
            }  
             a[href="https://google.com"]{
             color: red;   
         }
             button{
             width: 200px;
-            height: 50px;
-            font-size: 14px;
+            height: 60px;
+            font-size: 12px;
             background-color: green;
             margin: 10px;
-            font-weight: bolder;
-        }
+           }
             button:hover {
             background-color: orange;                         
         }
@@ -40,7 +38,6 @@
                     margin 20px;
                     background-image: url('florence_buenCulo_sep2018.JPG');
                     background-size:contain;
-                    background-attachment: fixed;
                 }
             }
             #container {
@@ -73,12 +70,49 @@
             }
         </style>
 
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#button1').onclick = hello;
+        })
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#button2').onclick = count;
+        })
+
+
+        let counter = 0;
+        function count() {
+            counter = counter + 1; //equal to saying counter++;
+            document.querySelector('#zero').innerHTML = counter;
+        }
+
+
+        function hello() {
+            let helloGoodbye = document.querySelector('#hello');
+           
+            if (helloGoodbye.innerHTML === 'Hello!') { 
+            helloGoodbye.innerHTML = 'Goodbye!';
+        } else {helloGoodbye.innerHTML = 'Hello!';
+        } 
+        }
+        
+    </script>
+
 </head>
    <body>
     <div class="alert alert-success" role="alert">
         Bienvenues à ma premiere WebPage!
-     </div>
-    
+    </div>
+
+    <h2 id="zero">0</h2>
+    <h1 id="hello">Hello!</h1>
+    <button id="button1">
+        Switch from hello to goodbye (using JavaScript)
+    </button>
+    <button id="button2">
+        See a pointless counter start counting from 0 (using JavaScript)
+    </button>
+
        <div class="card-deck">
         <div class="card h-100" style="width: 18rem;">
             <img src="Pajaro.jpg" class="card-img-top" alt="...">
@@ -112,7 +146,7 @@
               <a href="20180924_florenceEnrredadera.JPG" class="btn btn-primary">See image</a>
             </div>
           </div>
-
+    
         </div>
             </div>
             <div class="topButtons">
@@ -121,10 +155,6 @@
                 <button type="button" class="btn btn-outline-success">Successes</button>
                 <button type="button" class="btn btn-outline-danger">Failes</button>
             </div>
-
-        <button>
-            Click me and nothing will happen
-        </button>
 
         <ul>
             <li><a href="https://google.com">Google</a></li>
