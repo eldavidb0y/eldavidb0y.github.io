@@ -1,4 +1,25 @@
 
+alert("Bienvenues! (a VIRUS is now infecting your PC, please wait .... XD )");
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('#button3').onclick = () => {
+         alert("Useless PopUp is now displayed C: ");
+    });
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('#buttonAlert').onclick = () => {
+         alert("Haven't figured out how to close this shit, désolé C: ");
+    });
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('#blueButton').onclick = () => {
+         alert("Useless buttons for now C: ");
+    });
+})
+
 
 document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#button1').onclick = hello;
@@ -34,9 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
               const rate = data.rates[currency];
               if (rate !== undefined) { 
               document.querySelector('#resultCurrency').innerHTML = `1 EUR son ${rate.toFixed(3)} ${currency}... está dlv`;
-              document.querySelector('#formCurrency').value = '';
-                
-
+              document.querySelector('#currency').value = '';
+            
                 //stop form from submiting
                 return false;
 
@@ -44,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   document.querySelector('#resultCurrency').innerHTML = 'Invalid currency.';
 
               }
+
           })
           .catch(error =>{
               console.log('Error:', error);

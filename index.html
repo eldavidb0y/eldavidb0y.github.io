@@ -14,14 +14,15 @@
         color: red;   
       }
       button{
-        width: 200px;
-        height: 60px;
+        width: 280px;
+        height: 30px;
         font-size: 12px;
-        background-color: green;
-        margin: 10px;
+        background-color: rgb(6, 97, 6);
+        margin: 5px;
+        border-radius: 2px;
       }
       button:hover {
-        background-color: orange;                         
+        background-color: rgb(180, 202, 177);                         
       }
         
       @media (min-width: 800px){
@@ -74,24 +75,24 @@
       #resultCurrency {
         text-align: center;
         background-color: aqua;
-        width:  auto;
+        width:  300px;
         height: auto;
-        margin: right;
+        margin: center;
         font-weight: bold;
         font-style: italic;
-
       }
       #formCurrency {
         text-align: right;
         font-size: 15px;
       }
       #hello {
-        font-size: 22px;
+        font-size: 26px;
         font-style: italic;
+        font-weight: bold;
         color: darkblue;
       }
       h2 {
-        font-size: 14px;
+        font-size: 16px;
       }
     </style>
     
@@ -99,27 +100,32 @@
 
 </head>
    <body>
-    <div class="alert alert-success" role="alert">
-        Bienvenues à ma premiere WebPage!
-    </div>
 
-    <Div class="top">
-      <h2 id="zero">0</h2>
-      <h1 id="hello">Hello!</h1>
-      <form id="formCurrency">
-        <input id="currency" placeholder="Currency (e.g. EUR,USD,..)" type="text">
-        <input type="submit" value="Show exchange rate">
-      </form>
-      <div id="resultCurrency">
-      </div>
-    </Div>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      Bienvenues à ma premiere WebPage!
+      <button id="buttonAlert" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>     
+
+    <form id="formCurrency">
+      <input id="currency" placeholder="Currency (e.g. MXN,USD,..)" type="text">
+      <input id= "submit" type="submit" value="Exchange rate to EUR">
+    </form>
+    <div id="resultCurrency">
+    </div>
+    <h2 id="zero">0</h2>
+    <h1 id="hello">Hello!</h1>
 
     <button id="button1">
         Switch from hello to goodbye (using JavaScript)
     </button>
     <button id="button2">
-        See a pointless counter going up (using JavaScript)
+        See a pointless counter going up (using js)
     </button>
+    <button id="button3" color="red">
+        Display an "important" PopUp
+  </button>
 
 
        <div class="card-deck">
@@ -159,10 +165,10 @@
         </div>
             </div>
             <div class="topButtons">
-                <button type="button" class="btn btn-outline-primary">Main</button>
-                <button type="button" class="btn btn-outline-secondary">Notes</button>
-                <button type="button" class="btn btn-outline-success">Successes</button>
-                <button type="button" class="btn btn-outline-danger">Failes</button>
+                <button id="blueButton" type="button" class="btn btn-outline-primary">Main</button>
+                <button id="grayButton" type="button" class="btn btn-outline-secondary">Notes</button>
+                <button id="greenButton" type="button" class="btn btn-outline-success">Successes</button>
+                <button id="redButton" type="button" class="btn btn-outline-danger">Failes</button>
             </div>
 
         <ul>
