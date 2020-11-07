@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('#buttonNavbar').onclick = () => {
+         alert("Haven't figured out how to close this shit, désolé C: ");
+    });
+})
+
+
 /*document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelectorall('#blueButton').disabled = false) {
          alert("Useless buttons for now C: ");
