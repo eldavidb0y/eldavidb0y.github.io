@@ -95,13 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
 }})
 
 function hello() {
-      let helloGoodbye = localStorage.getItem('#hello');
-      if (document.querySelector('#hello').innerHTML === "Hello " + person + "!")
-       {
-//      document.getElementById('person').innerHTML = "Hello" + person + "!";
-    document.querySelector('#hello').innerHTML = 'Goodbye!';
-  } else {
-    document.querySelector('#hello').innerHTML = "Hello " + person + "!";
-  } 
-}        
-
+ let helloGoodbye = localStorage.getItem('#hello');
+    if (document.querySelector('#hello').innerHTML === "Hello " + person + "!")
+    {
+      document.querySelector('#hello').innerHTML = 'Goodbye!';
+    }  else {
+        document.querySelector('#hello').innerHTML = "Hello " + person + "!";
+       } 
+         
+}
